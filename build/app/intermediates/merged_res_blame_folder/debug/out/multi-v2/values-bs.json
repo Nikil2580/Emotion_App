@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/nikil/Documents/VS_Code/App/emotion_handling/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml",
+            "outputFile": "/home/nikil/Documents/VS_Code/App/emotion/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-bs/values-bs.xml",
             "map": [
                 {
                     "source": "/home/nikil/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/res/values-bs/values-bs.xml",

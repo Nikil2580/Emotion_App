@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import '../design_course_app_theme.dart';
 
-class CourseInfoScreen extends StatefulWidget {
+class EmotionalSupport extends StatefulWidget {
   @override
-  _CourseInfoScreenState createState() => _CourseInfoScreenState();
+  _EmotionalSupportState createState() => _EmotionalSupportState();
 }
 
-class _CourseInfoScreenState extends State<CourseInfoScreen>
+class _EmotionalSupportState extends State<EmotionalSupport>
     with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
@@ -56,8 +56,7 @@ class _CourseInfoScreenState extends State<CourseInfoScreen>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset(
-                      'D:\vscode apps\Negative-Emotions-Hangling-flutter-main\flutter_application_mindfulness\assets\images\emotional support img.jpg'),
+                  child: Image.asset('assets/images/emotional_support.jpg'),
                 ),
               ],
             ),

@@ -4,6 +4,8 @@ import 'package:emotion_handling/Anger/cognitive_restructuring.dart';
 import 'package:emotion_handling/Anger/relaxation.dart';
 import 'package:emotion_handling/Anxiety/being_mindful.dart';
 import 'package:emotion_handling/Anger/think_before_you_speak.dart';
+import 'package:emotion_handling/Sad/emotional_support.dart';
+import 'package:emotion_handling/Sad/self_compassion.dart';
 import 'package:flutter/material.dart';
 
 class EventsPage extends StatefulWidget {
@@ -14,7 +16,7 @@ class EventsPage extends StatefulWidget {
 }
 
 class _EventsPageState extends State<EventsPage> {
-  final titleStyle = const TextStyle(fontSize: 16, fontWeight: FontWeight.bold);
+  final titleStyle = const TextStyle(fontSize: 20, fontWeight: FontWeight.w200);
   final subTitleStyle = const TextStyle(
     fontSize: 12,
     fontFamily: 'Roboto Thin',
@@ -68,7 +70,7 @@ class _EventsPageState extends State<EventsPage> {
               const SizedBox(height: 10),
               Expanded(
                 child: ListView.builder(
-                  itemCount: entries.length,
+                  itemCount: entries1.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(
@@ -82,7 +84,7 @@ class _EventsPageState extends State<EventsPage> {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => _pages[index],
+                                builder: (context) => _pages1[index],
                               ),
                             );
                           },
@@ -92,13 +94,13 @@ class _EventsPageState extends State<EventsPage> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     SizedBox(
-                                      height: 135,
+                                      height: 200,
                                       child: Stack(children: [
                                         Container(
                                           foregroundDecoration: BoxDecoration(
                                               image: DecorationImage(
                                             image: AssetImage(
-                                                'assets/images/${entries[index]}'),
+                                                'assets/images/${entries1[index]}'),
                                             fit: BoxFit.fitWidth,
                                           )),
                                         ),
@@ -118,19 +120,19 @@ class _EventsPageState extends State<EventsPage> {
                                                     right: 10.0),
                                                 child: IconButton(
                                                   icon: Icon(
-                                                    _selections[index]
+                                                    _selections1[index]
                                                         ? Icons
                                                             .favorite_border_sharp
                                                         : Icons.favorite_sharp,
-                                                    color: _selections[index]
+                                                    color: _selections1[index]
                                                         ? Colors.white
                                                         : Colors.red,
                                                     size: 20,
                                                   ),
                                                   onPressed: () {
                                                     setState(() {
-                                                      _selections[index] =
-                                                          !_selections[index];
+                                                      _selections1[index] =
+                                                          !_selections1[index];
                                                     });
                                                   },
                                                 ),
@@ -143,11 +145,11 @@ class _EventsPageState extends State<EventsPage> {
                                     Center(
                                       child: Padding(
                                         padding: const EdgeInsets.fromLTRB(
-                                            14.0, 50, 0, 10),
+                                            14.0, 20, 0, 10),
                                         child: Align(
                                             alignment: Alignment.center,
                                             child: Text(
-                                              rolesOrJobs[index],
+                                              anger[index],
                                               style: titleStyle,
                                             )),
                                       ),
@@ -161,15 +163,259 @@ class _EventsPageState extends State<EventsPage> {
               ),
             ],
           ),
-          Icon(Icons.car_crash, size: 350),
-          Icon(Icons.bus_alert, size: 350)
+          Column(
+            children: [
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Scrollbar(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    // child: TabBar(
+                    // minWidth: 120.0,
+                    // fontSize: 14,
+                    // cornerRadius: 7.0,
+                    // customWidths: _customWidhts,
+                    // activeBgColors: _activebgcolors,
+                    // activeFgColor: Colors.white,
+                    // inactiveBgColor: Color.fromARGB(251, 251, 251, 251),
+                    // inactiveFgColor: Colors.black,
+                    // //initialLabelIndex: 0,
+                    // //totalSwitches: 5,
+                    // labels: _categories,
+                    // radiusStyle: true,
+                    // customTextStyles: [
+                    //   TextStyle(fontSize: 11, fontWeight: FontWeight.w200)
+                    // ],
+                    // ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: entries2.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 3),
+                      child: Card(
+                        elevation: 5,
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14)),
+                        child: new InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => _pages2[index],
+                              ),
+                            );
+                          },
+                          child: SizedBox(
+                              height: 270,
+                              child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      height: 200,
+                                      child: Stack(children: [
+                                        Container(
+                                          foregroundDecoration: BoxDecoration(
+                                              image: DecorationImage(
+                                            image: AssetImage(
+                                                'assets/images/${entries2[index]}'),
+                                            fit: BoxFit.fitWidth,
+                                          )),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Align(
+                                            alignment: Alignment.topRight,
+                                            child: Container(
+                                              height: 35,
+                                              width: 35,
+                                              decoration: const BoxDecoration(
+                                                  color: Color.fromARGB(
+                                                      95, 0, 0, 0),
+                                                  shape: BoxShape.circle),
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    right: 10.0),
+                                                child: IconButton(
+                                                  icon: Icon(
+                                                    _selections2[index]
+                                                        ? Icons
+                                                            .favorite_border_sharp
+                                                        : Icons.favorite_sharp,
+                                                    color: _selections2[index]
+                                                        ? Colors.white
+                                                        : Colors.red,
+                                                    size: 20,
+                                                  ),
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      _selections2[index] =
+                                                          !_selections2[index];
+                                                    });
+                                                  },
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ]),
+                                    ),
+                                    Center(
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            14.0, 20, 0, 10),
+                                        child: Align(
+                                            alignment: Alignment.center,
+                                            child: Text(
+                                              anxiety[index],
+                                              style: titleStyle,
+                                            )),
+                                      ),
+                                    ),
+                                  ])),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+          Column(
+            children: [
+              const SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Scrollbar(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    // child: TabBar(
+                    // minWidth: 120.0,
+                    // fontSize: 14,
+                    // cornerRadius: 7.0,
+                    // customWidths: _customWidhts,
+                    // activeBgColors: _activebgcolors,
+                    // activeFgColor: Colors.white,
+                    // inactiveBgColor: Color.fromARGB(251, 251, 251, 251),
+                    // inactiveFgColor: Colors.black,
+                    // //initialLabelIndex: 0,
+                    // //totalSwitches: 5,
+                    // labels: _categories,
+                    // radiusStyle: true,
+                    // customTextStyles: [
+                    //   TextStyle(fontSize: 11, fontWeight: FontWeight.w200)
+                    // ],
+                    // ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 10),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: entries3.length,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 3),
+                      child: Card(
+                        elevation: 5,
+                        clipBehavior: Clip.antiAliasWithSaveLayer,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(14)),
+                        child: new InkWell(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => _pages3[index],
+                              ),
+                            );
+                          },
+                          child: SizedBox(
+                              height: 270,
+                              child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      height: 200,
+                                      child: Stack(children: [
+                                        Container(
+                                          foregroundDecoration: BoxDecoration(
+                                              image: DecorationImage(
+                                            image: AssetImage(
+                                                'assets/images/${entries3[index]}'),
+                                            fit: BoxFit.fitWidth,
+                                          )),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: Align(
+                                            alignment: Alignment.topRight,
+                                            child: Container(
+                                              height: 35,
+                                              width: 35,
+                                              decoration: const BoxDecoration(
+                                                  color: Color.fromARGB(
+                                                      95, 0, 0, 0),
+                                                  shape: BoxShape.circle),
+                                              child: Padding(
+                                                padding: const EdgeInsets.only(
+                                                    right: 10.0),
+                                                child: IconButton(
+                                                  icon: Icon(
+                                                    _selections3[index]
+                                                        ? Icons
+                                                            .favorite_border_sharp
+                                                        : Icons.favorite_sharp,
+                                                    color: _selections3[index]
+                                                        ? Colors.white
+                                                        : Colors.red,
+                                                    size: 20,
+                                                  ),
+                                                  onPressed: () {
+                                                    setState(() {
+                                                      _selections3[index] =
+                                                          !_selections3[index];
+                                                    });
+                                                  },
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ]),
+                                    ),
+                                    Center(
+                                      child: Padding(
+                                        padding: const EdgeInsets.fromLTRB(
+                                            14.0, 20, 0, 10),
+                                        child: Align(
+                                            alignment: Alignment.center,
+                                            child: Text(
+                                              sad[index],
+                                              style: titleStyle,
+                                            )),
+                                      ),
+                                    ),
+                                  ])),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ]),
       ),
     );
   }
 }
 
-final List<String> entries = <String>[
+final List<String> entries1 = <String>[
   'relaxation.jpg',
   'restructuring.jpg',
   'think.jpg',
@@ -177,7 +423,11 @@ final List<String> entries = <String>[
   'reappraisal.jpg'
 ];
 
-final List<String> rolesOrJobs = <String>[
+final List<String> entries2 = <String>['mindful.png', 'mindful.png'];
+
+final List<String> entries3 = <String>['compassion.jpg', 'emotional_support.jpg'];
+
+final List<String> anger = <String>[
   'Relaxation Techniques',
   'Cognitive Restructuring',
   'Think Before You Speak',
@@ -185,12 +435,24 @@ final List<String> rolesOrJobs = <String>[
   'Cognitive Reappraisal',
 ];
 
-final List<bool> _selections = List.generate(rolesOrJobs.length, (_) => true);
+final List<String> anxiety = <String>['Being Mindful', 'Self Awareness'];
 
-final List<Widget> _pages = [
+final List<String> sad = <String>['Self Compassion', 'Emotional Support'];
+
+final List<bool> _selections1 = List.generate(anger.length, (_) => true);
+
+final List<bool> _selections2 = List.generate(anger.length, (_) => true);
+
+final List<bool> _selections3 = List.generate(anger.length, (_) => true);
+
+final List<Widget> _pages1 = [
   Relaxation(),
   CognitiveRestructuring(),
   ThinkSpeak(),
   BetterCommunication(),
   CognitiveReappraisal()
 ];
+
+final List<Widget> _pages2 = [BeingMindful(),];
+
+final List<Widget> _pages3 = [SelfCompassion(), EmotionalSupport()];

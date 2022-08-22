@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/nikil/Documents/VS_Code/App/emotion_handling/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/home/nikil/Documents/VS_Code/App/emotion/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/nikil/Documents/VS_Code/App/emotion_handling/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/home/nikil/Documents/VS_Code/App/emotion/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

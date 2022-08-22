@@ -1,0 +1,4 @@
+#Mon Aug 22 14:28:54 IST 2022
+base.0=/home/nikil/Documents/VS_Code/App/emotion_handling/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

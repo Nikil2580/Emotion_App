@@ -126,17 +126,19 @@ class _EmotionalSupportState extends State<EmotionalSupport>
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
-                                child: Text(
-                                  'Emotional support is a way of helping people feel connected and less alone. Providing emotional support requires a person to listen without judgment and show that they understand by responding empathetically. Find a wellwisher in your circle who can provide you with this.',
-                                  textAlign: TextAlign.justify,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 14,
-                                    letterSpacing: 0.27,
-                                    color: DesignCourseAppTheme.grey,
+                                child: SingleChildScrollView(
+                                  child: Text(
+                                    'Emotional support is a way of helping people feel connected and less alone. Providing emotional support requires a person to listen without judgment and show that they understand by responding empathetically. Find a wellwisher in your circle who can provide you with this.',
+                                    textAlign: TextAlign.justify,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w200,
+                                      fontSize: 14,
+                                      letterSpacing: 0.27,
+                                      color: DesignCourseAppTheme.grey,
+                                    ),
+                                    maxLines: 30,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
                             ),

@@ -6,8 +6,7 @@ class ThinkSpeak extends StatefulWidget {
   _ThinkSpeakState createState() => _ThinkSpeakState();
 }
 
-class _ThinkSpeakState extends State<ThinkSpeak>
-    with TickerProviderStateMixin {
+class _ThinkSpeakState extends State<ThinkSpeak> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -56,7 +55,10 @@ class _ThinkSpeakState extends State<ThinkSpeak>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/think.jpg'),
+                  child: FittedBox(
+                    child: Image.asset('assets/images/think.jpg'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ],
             ),
@@ -126,20 +128,20 @@ class _ThinkSpeakState extends State<ThinkSpeak>
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
-                                child: SingleChildScrollView(    
-                                child: Text(
-                                  'Speaking may seem to happen without a lot of thought because it occurs so quickly, psycholinguistics research has shown that we do plan our speech in different ways and we do think in advance to various degrees\n\n1. Mentally take a pause\n2. Take a few deep breaths(fresh air, feel relaxed, Better processing)\n3. Observe/Listen- You may feel the urge to respond to everything but not everything requires your response. \n4. Mentally, Now its time to play the speak button',
-                                  textAlign: TextAlign.justify,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 14,
-                                    letterSpacing: 0.27,
-                                    color: DesignCourseAppTheme.grey,
+                                child: SingleChildScrollView(
+                                  child: Text(
+                                    'Speaking may seem to happen without a lot of thought because it occurs so quickly, psycholinguistics research has shown that we do plan our speech in different ways and we do think in advance to various degrees\n\n1. Mentally take a pause\n2. Take a few deep breaths(fresh air, feel relaxed, Better processing)\n3. Observe/Listen- You may feel the urge to respond to everything but not everything requires your response. \n4. Mentally, Now its time to play the speak button',
+                                    textAlign: TextAlign.justify,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w200,
+                                      fontSize: 14,
+                                      letterSpacing: 0.27,
+                                      color: DesignCourseAppTheme.grey,
+                                    ),
+                                    maxLines: 50,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  maxLines: 50,
-                                  overflow: TextOverflow.ellipsis,
                                 ),
-                              ),
                               ),
                             ),
                           ),

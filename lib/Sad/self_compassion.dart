@@ -56,7 +56,10 @@ class _SelfCompassionState extends State<SelfCompassion>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/compassion.jpg'),
+                  child: FittedBox(
+                    child: Image.asset('assets/images/self_compassion.jpg'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ],
             ),
@@ -105,20 +108,20 @@ class _SelfCompassionState extends State<SelfCompassion>
                               ),
                             ),
                           ),
-                          AnimatedOpacity(
-                            duration: const Duration(milliseconds: 500),
-                            opacity: opacity1,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8),
-                              child: Row(
-                                children: <Widget>[
-                                  getTimeBoxUI('1 time', 'Start Journaling'),
-                                  getTimeBoxUI('15 mins', 'Take a break'),
-                                  //getTimeBoxUI('', 'Seat'),
-                                ],
-                              ),
-                            ),
-                          ),
+                          // AnimatedOpacity(
+                          //   duration: const Duration(milliseconds: 500),
+                          //   opacity: opacity1,
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.all(8),
+                          //     child: Row(
+                          //       children: <Widget>[
+                          //         getTimeBoxUI('1 time', 'Start Journaling'),
+                          //         getTimeBoxUI('15 mins', 'Take a break'),
+                          //         //getTimeBoxUI('', 'Seat'),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
                           Expanded(
                             child: AnimatedOpacity(
                               duration: const Duration(milliseconds: 500),
@@ -126,17 +129,19 @@ class _SelfCompassionState extends State<SelfCompassion>
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
-                                child: Text(
-                                  'Self-compassion entails being warm ,understanding and nurturing toward ourselves when we want to ignore our pain or bombard ourselves with self-criticism.\ni.Self Compassion journal:\nKeeping a daily journal in which you process the difficult events of your day through a lens of self-compassion can enhance both mental and physical well-being. This exercise will help make self-kindness, common humanity, and mindfulness part of your daily life.\nii.Self compassion break:\nThis session can be used any time of day or night and will help you remember to evoke the three aspects of self-compassion in the moment you need it most',
-                                  textAlign: TextAlign.justify,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 14,
-                                    letterSpacing: 0.27,
-                                    color: DesignCourseAppTheme.grey,
+                                child: SingleChildScrollView(
+                                  child: Text(
+                                    'Self-compassion entails being warm ,understanding and nurturing toward ourselves when we want to ignore our pain or bombard ourselves with self-criticism.\ni.Self Compassion journal:\nKeeping a daily journal in which you process the difficult events of your day through a lens of self-compassion can enhance both mental and physical well-being. This exercise will help make self-kindness, common humanity, and mindfulness part of your daily life.\nii.Self compassion break:\nThis session can be used any time of day or night and will help you remember to evoke the three aspects of self-compassion in the moment you need it most.',
+                                    textAlign: TextAlign.justify,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w200,
+                                      fontSize: 14,
+                                      letterSpacing: 0.27,
+                                      color: DesignCourseAppTheme.grey,
+                                    ),
+                                    maxLines: 50,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
                             ),

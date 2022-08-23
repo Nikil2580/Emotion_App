@@ -4,6 +4,7 @@ import 'package:emotion_handling/Anger/cognitive_restructuring.dart';
 import 'package:emotion_handling/Anger/relaxation.dart';
 import 'package:emotion_handling/Anxiety/being_mindful.dart';
 import 'package:emotion_handling/Anger/think_before_you_speak.dart';
+import 'package:emotion_handling/Anxiety/self_awareness.dart';
 import 'package:emotion_handling/Sad/emotional_support.dart';
 import 'package:emotion_handling/Sad/self_compassion.dart';
 import 'package:flutter/material.dart';
@@ -34,9 +35,9 @@ class _EventsPageState extends State<EventsPage> {
           automaticallyImplyLeading: false,
           centerTitle: true,
           bottom: TabBar(tabs: [
-            Tab(text: 'Sadness'),
+            Tab(text: 'Anger'),
             Tab(text: 'Anxiety'),
-            Tab(text: 'Anger')
+            Tab(text: 'Sadness')
           ]),
         ),
         body: TabBarView(children: [
@@ -423,9 +424,9 @@ final List<String> entries1 = <String>[
   'reappraisal.jpg'
 ];
 
-final List<String> entries2 = <String>['mindful.png', 'mindful.png'];
+final List<String> entries2 = <String>['mindful.png', 'self_awareness.jpg'];
 
-final List<String> entries3 = <String>['compassion.jpg', 'emotional_support.jpg'];
+final List<String> entries3 = <String>['self_compassion.jpg', 'emotional_support.jpg'];
 
 final List<String> anger = <String>[
   'Relaxation Techniques',
@@ -453,6 +454,6 @@ final List<Widget> _pages1 = [
   CognitiveReappraisal()
 ];
 
-final List<Widget> _pages2 = [BeingMindful(),];
+final List<Widget> _pages2 = [BeingMindful(), SelfAwareness()];
 
 final List<Widget> _pages3 = [SelfCompassion(), EmotionalSupport()];

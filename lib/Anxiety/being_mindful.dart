@@ -107,20 +107,20 @@ class _BeingMindfulState extends State<BeingMindful>
                               ),
                             ),
                           ),
-                          AnimatedOpacity(
-                            duration: const Duration(milliseconds: 500),
-                            opacity: opacity1,
-                            child: Padding(
-                              padding: const EdgeInsets.all(8),
-                              child: Row(
-                                children: <Widget>[
-                                  getTimeBoxUI('5min', 'Practice'),
-                                  getTimeBoxUI('1 time', 'Day'),
-                                  //getTimeBoxUI('', 'Seat'),
-                                ],
-                              ),
-                            ),
-                          ),
+                          // AnimatedOpacity(
+                          //   duration: const Duration(milliseconds: 500),
+                          //   opacity: opacity1,
+                          //   child: Padding(
+                          //     padding: const EdgeInsets.all(8),
+                          //     child: Row(
+                          //       children: <Widget>[
+                          //         getTimeBoxUI('5min', 'Practice'),
+                          //         getTimeBoxUI('1 time', 'Day'),
+                          //         //getTimeBoxUI('', 'Seat'),
+                          //       ],
+                          //     ),
+                          //   ),
+                          // ),
                           Expanded(
                             child: AnimatedOpacity(
                               duration: const Duration(milliseconds: 500),
@@ -128,17 +128,19 @@ class _BeingMindfulState extends State<BeingMindful>
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
-                                child: Text(
-                                  'Mindfulness meditation is the practice of actually being present in the moment, which in turn trains us to become more mindful throughout the day, particularly during difficult situations. As Ms. Brach puts it: “Mindfulness is your awareness of whats going on in the present moment without any judgment',
-                                  textAlign: TextAlign.justify,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 14,
-                                    letterSpacing: 0.27,
-                                    color: DesignCourseAppTheme.grey,
+                                child: SingleChildScrollView(
+                                  child: Text(
+                                    'Mindfulness meditation is the practice of actually being present in the moment, which in turn trains us to become more mindful throughout the day, particularly during difficult situations. As Ms. Brach puts it: “Mindfulness is your awareness of whats going on in the present moment without any judgment',
+                                    textAlign: TextAlign.justify,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w200,
+                                      fontSize: 14,
+                                      letterSpacing: 0.27,
+                                      color: DesignCourseAppTheme.grey,
+                                    ),
+                                    maxLines: 30,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ),
                             ),

@@ -56,7 +56,10 @@ class _CognitiveReappraisalState extends State<CognitiveReappraisal>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/reappraisal.jpg'),
+                  child: FittedBox(
+                    child: Image.asset('assets/images/reappraisal.jpg'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ],
             ),
@@ -127,18 +130,18 @@ class _CognitiveReappraisalState extends State<CognitiveReappraisal>
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: SingleChildScrollView(
-                                child: Text(
-                                  'Cognitive reappraisal is an ability to successfully reappraise enables us to reduce negative emotions and open us up to experiencing happiness, even during difficult times.\n\nReappraisal involves cognitively reframing an event to reduce the negative emotions you feel.\n\nTo practice reappraisal, start by writing out a list of things you learned from a past failure. For example, if you missed an important deadline, maybe you learned that you need to prioritize better, delegate more, or tone down your perfectionism.\n\nAsk yourself these questions to help you reappraise:\n\n• Were there, or will there be, any positive outcomes that result from this situation?\n\n• Are you grateful for any part of this situation?\n\n• In what ways are you better off than when you started?\n\n• What did you learn?\n\n• How did you grow and develop as a result of this situation?\n',
-                                  textAlign: TextAlign.justify,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w200,
-                                    fontSize: 14,
-                                    letterSpacing: 0.27,
-                                    color: DesignCourseAppTheme.grey,
+                                  child: Text(
+                                    'Cognitive reappraisal is an ability to successfully reappraise enables us to reduce negative emotions and open us up to experiencing happiness, even during difficult times.\n\nReappraisal involves cognitively reframing an event to reduce the negative emotions you feel.\n\nTo practice reappraisal, start by writing out a list of things you learned from a past failure. For example, if you missed an important deadline, maybe you learned that you need to prioritize better, delegate more, or tone down your perfectionism.\n\nAsk yourself these questions to help you reappraise:\n\n• Were there, or will there be, any positive outcomes that result from this situation?\n\n• Are you grateful for any part of this situation?\n\n• In what ways are you better off than when you started?\n\n• What did you learn?\n\n• How did you grow and develop as a result of this situation?\n',
+                                    textAlign: TextAlign.justify,
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w200,
+                                      fontSize: 14,
+                                      letterSpacing: 0.27,
+                                      color: DesignCourseAppTheme.grey,
+                                    ),
+                                    maxLines: 50,
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  maxLines: 50,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
                                 ),
                               ),
                             ),

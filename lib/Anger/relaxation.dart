@@ -6,8 +6,7 @@ class Relaxation extends StatefulWidget {
   _RelaxationState createState() => _RelaxationState();
 }
 
-class _RelaxationState extends State<Relaxation>
-    with TickerProviderStateMixin {
+class _RelaxationState extends State<Relaxation> with TickerProviderStateMixin {
   final double infoHeight = 364.0;
   AnimationController? animationController;
   Animation<double>? animation;
@@ -56,7 +55,9 @@ class _RelaxationState extends State<Relaxation>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/images/relaxation.jpg'),
+                  child: FittedBox(
+                      child: Image.asset('assets/images/relaxation.jpg'),
+                      fit: BoxFit.fill),
                 ),
               ],
             ),
@@ -123,6 +124,24 @@ class _RelaxationState extends State<Relaxation>
                             child: AnimatedOpacity(
                               duration: const Duration(milliseconds: 500),
                               opacity: opacity2,
+                              // child: Padding(
+                              //   padding: const EdgeInsets.only(
+                              //       left: 16, right: 16, top: 8, bottom: 8),
+                              //   child: SingleChildScrollView(
+                              //     child: Text(
+                              //       'This method encourages you comfort and relaxation. It activates the sympathetic nervous system region, which is in charge of rest and healing.',
+                              //       textAlign: TextAlign.justify,
+                              //       style: TextStyle(
+                              //         fontWeight: FontWeight.w200,
+                              //         fontSize: 14,
+                              //         letterSpacing: 0.27,
+                              //         color: DesignCourseAppTheme.grey,
+                              //       ),
+                              //       maxLines: 3,
+                              //       overflow: TextOverflow.ellipsis,
+                              //     ),
+                              //   ),
+                              // ),
                               child: Padding(
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
@@ -136,7 +155,7 @@ class _RelaxationState extends State<Relaxation>
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
-                                    maxLines: 3,
+                                    maxLines: 50,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),

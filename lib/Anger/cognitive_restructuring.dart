@@ -56,8 +56,10 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child:
-                      Image.asset('assets/images/restructuring.jpg'),
+                  child: FittedBox(
+                    child: Image.asset('assets/images/restructuring.jpg'),
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ],
             ),
@@ -113,8 +115,8 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                               padding: const EdgeInsets.all(8),
                               child: Row(
                                 children: <Widget>[
-                                  //getTimeBoxUI('5min', 'Practice'),
-                                  //getTimeBoxUI('1 time', 'Day'),
+//                                  getTimeBoxUI('5min', 'Practice'),
+//                                 getTimeBoxUI('1 time', 'Day'),
                                   //getTimeBoxUI('', 'Seat'),
                                 ],
                               ),
@@ -137,7 +139,7 @@ class _CognitiveRestructuringState extends State<CognitiveRestructuring>
                                       letterSpacing: 0.27,
                                       color: DesignCourseAppTheme.grey,
                                     ),
-                                    maxLines: 3,
+                                    maxLines: 50,
                                     overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
